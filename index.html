@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAAS-Guard — AI-Powered Granular Access Control for SaaS Applications</title>
+  <meta name="description"
+    content="SAAS-Guard is an AI-powered framework for granular access control in SaaS applications, featuring anomaly detection, role recommendation, access classification, and explainable AI.">
+  <meta name="keywords"
+    content="SAAS-Guard, SaaS Security, AI Access Control, Insider Threat Detection, SLIIT, Cybersecurity Research">
+  <meta name="author" content="SAAS-Guard Research Team — SLIIT">
+  <meta property="og:title" content="SAAS-Guard — AI-Powered Granular Access Control">
+  <meta property="og:description"
+    content="A multi-model AI framework for insider threat detection, role recommendation, access classification, and explainable decision-making for SaaS platforms.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Asserts/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- tsParticles -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js" defer></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+
+  <!-- Our Scripts -->
+  <script src="js/data.js" defer></script>
+  <script src="js/particles-config.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Background Orbs -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#home" class="nav-logo">
+        <img src="Asserts/logo.png" alt="SAAS-Guard Logo" class="logo-img">
+        SAAS-Guard
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">What is SAAS-Guard?</a>
+        <a href="#team" class="nav-link">Team</a>
+        <a href="#domain" class="nav-link">Domain</a>
+        <a href="#milestones" class="nav-link">Milestones</a>
+        <a href="#documents" class="nav-link">Documents</a>
+        <a href="#presentations" class="nav-link">Presentations</a>
+        <a href="#about-us" class="nav-link">About Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <section class="hero" id="home">
+    <div id="hero-particles"></div>
+    <div class="hero-content">
+      <!--<img src="Asserts/logo.png" alt="SAAS-Guard Logo" class="hero-logo">-->
+      <div class="hero-badge">
+        <i data-lucide="shield-check" style="width:16px;height:16px"></i>
+        Project ID: 25-26J-053 · SLIIT
+      </div>
+      <h1 class="hero-title">
+        <span class="gradient-text">SAAS-Guard</span>
+      </h1>
+      <p class="hero-tagline">AI-Powered Granular Access Control for SaaS Applications</p>
+      <div class="hero-typewriter">
+        <span id="typewriter-text"></span><span class="typewriter-cursor"></span>
+      </div>
+      <div class="hero-buttons">
+        <a href="#about" class="btn btn-primary">
+          <i data-lucide="search" class="btn-icon"></i>
+          Explore Research
+        </a>
+        <a href="#team" class="btn btn-outline">
+          <i data-lucide="users" class="btn-icon"></i>
+          Meet the Team
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>SCROLL</span>
+      <i data-lucide="chevrons-down" style="width:20px;height:20px"></i>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WHAT IS SAAS-GUARD?
+       ============================================================ -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i data-lucide="info" style="width:14px;height:14px"></i> About the Project</span>
+        <h2 class="section-title">What is <span class="gradient-text">SAAS-Guard</span>?</h2>
+        <p class="section-subtitle">A multi-model AI framework for adaptive, explainable access control in cloud-native
+          SaaS environments.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Modern SaaS platforms face increasing challenges in managing user access securely and adaptively within
+            cloud-native, multi-tenant environments. Traditional access control mechanisms such as RBAC and ABAC rely
+            heavily on static rules and predefined user-role mappings.</p>
+          <p>These models struggle to adapt to dynamic user behavior, contextual changes, or sophisticated insider
+            threats — leading to over-privileged access, policy misconfigurations, and delayed threat detection.</p>
+          <p style="color: var(--accent-secondary); font-weight: 500;">SAAS-Guard proposes an AI-powered framework that
+            continuously learns from user behavior, detects anomalies in real time, predicts access decisions, and
+            provides transparent, auditable justifications — advancing Zero Trust security and GDPR compliance.</p>
+        </div>
+        <div class="about-visual">
+          <div class="about-visual-inner">
+            <div class="about-visual-icon">
+              <i data-lucide="shield-check"
+                style="width:64px;height:64px;color:var(--accent-primary);display:block;margin:0 auto 16px"></i>
+              <div style="font-size:1.5rem;font-weight:700;color:var(--text-primary);margin-bottom:8px;">Zero Trust
+              </div>
+              <div>AI-Driven · Adaptive · Explainable</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="stats-row">
+        <div class="stat-item glass-card">
+          <div class="stat-number" data-count="4" data-suffix="+">0</div>
+          <div class="stat-label">AI Modules</div>
+        </div>
+        <div class="stat-item glass-card">
+          <div class="stat-number" data-count="4">0</div>
+          <div class="stat-label">Team Members</div>
+        </div>
+        <div class="stat-item glass-card">
+          <div class="stat-number" data-count="7" data-suffix="+">0</div>
+          <div class="stat-label">Research Documents</div>
+        </div>
+        <div class="stat-item glass-card">
+          <div class="stat-number" data-count="2">0</div>
+          <div class="stat-label">Supervisors</div>
+        </div>
+      </div>
+
+      <!-- Feature Cards -->
+      <div class="features-grid" style="margin-top:64px;">
+        <div class="glass-card feature-card">
+          <div class="feature-icon">
+            <i data-lucide="shield-alert"></i>
+          </div>
+          <h3>Anomaly Detection</h3>
+          <p>Unsupervised ML detects insider threats and zero-day attacks in real time without requiring labeled attack
+            data.</p>
+        </div>
+        <div class="glass-card feature-card">
+          <div class="feature-icon">
+            <i data-lucide="cpu"></i>
+          </div>
+          <h3>Role Recommendation</h3>
+          <p>Behavioral clustering suggests least-privilege roles based on actual user access patterns and peer-group
+            similarity.</p>
+        </div>
+        <div class="glass-card feature-card">
+          <div class="feature-icon">
+            <i data-lucide="lock-keyhole"></i>
+          </div>
+          <h3>Access Classifier</h3>
+          <p>ML models predict allow/deny decisions dynamically with risk-calibrated confidence scores.</p>
+        </div>
+        <div class="glass-card feature-card">
+          <div class="feature-icon">
+            <i data-lucide="brain-circuit"></i>
+          </div>
+          <h3>Explainability Engine</h3>
+          <p>Post-Hoc XAI Techniques & a constrained local LLM generate forensic-quality, hallucination-free decision
+            summaries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TEAM SECTION
+       ============================================================ -->
+  <section id="team">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i data-lucide="users" style="width:14px;height:14px"></i> Research
+          Contributions</span>
+        <h2 class="section-title">Our <span class="gradient-text">Team</span></h2>
+        <p class="section-subtitle">A dedicated team of cybersecurity researchers specializing in AI-powered access
+          control.</p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Member 1 -->
+        <div class="glass-card team-card">
+          <div class="team-photo-wrapper">
+            <img src="Asserts/KARUNARATHNE.png" alt="Dinusha Karunarathne" class="team-photo" loading="lazy">
+          </div>
+          <h3 class="team-name">Dinusha Karunarathne</h3>
+          <div class="team-id">IT22352262</div>
+          <p class="team-component">Insider Threat Detection using Unsupervised ML</p>
+          <a href="#about-us" class="team-link">More Details <i data-lucide="arrow-right"
+              style="width:14px;height:14px"></i></a>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="glass-card team-card">
+          <div class="team-photo-wrapper">
+            <img src="Asserts/SANDAKALUM.png" alt="Saranga Sandakalum" class="team-photo" loading="lazy">
+          </div>
+          <h3 class="team-name">Saranga Sandakalum</h3>
+          <div class="team-id">IT22620248</div>
+          <p class="team-component">Behavioral Clustering for Least-Privilege Roles</p>
+          <a href="#about-us" class="team-link">More Details <i data-lucide="arrow-right"
+              style="width:14px;height:14px"></i></a>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="glass-card team-card">
+          <div class="team-photo-wrapper">
+            <img src="Asserts/RATHNAYAKE.png" alt="Achira Rathnayake" class="team-photo" loading="lazy">
+          </div>
+          <h3 class="team-name">Achira Rathnayake</h3>
+          <div class="team-id">IT22609762</div>
+          <p class="team-component">ML-Based Dynamic Access Decisions</p>
+          <a href="#about-us" class="team-link">More Details <i data-lucide="arrow-right"
+              style="width:14px;height:14px"></i></a>
+        </div>
+
+        <!-- Member 4 -->
+        <div class="glass-card team-card">
+          <div class="team-photo-wrapper">
+            <img src="Asserts/BANDARA.png" alt="Anuradha Bandara" class="team-photo" loading="lazy">
+          </div>
+          <h3 class="team-name">Anuradha Bandara</h3>
+          <div class="team-id">IT22597274</div>
+          <p class="team-component">Post-Hoc XAI Techniques & LLM-based Audit Explanations</p>
+          <a href="#about-us" class="team-link">More Details <i data-lucide="arrow-right"
+              style="width:14px;height:14px"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       RESEARCH DOMAIN
+       ============================================================ -->
+  <section id="domain">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i data-lucide="microscope" style="width:14px;height:14px"></i> Research
+          Domain</span>
+        <h2 class="section-title">Research <span class="gradient-text">Domain</span></h2>
+        <p class="section-subtitle">Explore our research architecture, methodology, and technology stack.</p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="domain-tabs">
+        <button class="domain-tab active" data-tab="architecture">Architecture</button>
+        <button class="domain-tab" data-tab="literature">Literature Survey</button>
+        <button class="domain-tab" data-tab="gap">Research Gap</button>
+        <button class="domain-tab" data-tab="problem">Problem</button>
+        <button class="domain-tab" data-tab="objectives">Objectives</button>
+        <button class="domain-tab" data-tab="methodology">Methodology</button>
+        <button class="domain-tab" data-tab="technologies">Technologies</button>
+      </div>
+
+      <!-- Tab Contents -->
+      <div class="glass-card">
+        <!-- Architecture -->
+        <div class="domain-content active" id="tab-architecture">
+          <div class="domain-panel">
+            <h3>Architecture Design</h3>
+            <p>The SAAS-Guard system architecture integrates four AI-driven modules into a unified, modular pipeline for
+              adaptive access control in SaaS environments. The architecture follows a microservice-oriented design
+              with:</p>
+            <ul class="research-list">
+              <li><strong>Data Ingestion Layer:</strong> Collects user behavioral logs, access requests, and contextual
+                metadata from SaaS applications.</li>
+              <li><strong>Anomaly Detection Module:</strong> Processes behavioral streams through unsupervised ML models
+                (Isolation Forest, Autoencoders) for real-time insider threat detection.</li>
+              <li><strong>Role Recommendation Engine:</strong> Applies behavioral clustering (DBSCAN, K-Means) to
+                suggest least-privilege role assignments.</li>
+              <li><strong>Access Classifier:</strong> Uses ensemble ML models (XGBoost, Random Forest) for dynamic
+                allow/deny decisions with confidence scoring.</li>
+              <li><strong>Explainability Layer:</strong> Integrates Post-Hoc XAI Techniques and a constrained local LLM
+                to generate human-readable, audit-ready decision justifications.</li>
+              <li><strong>Policy Enforcement Gateway:</strong> Enforces decisions in real-time with Zero Trust
+                architecture principles.</li>
+            </ul>
+            <div class="architecture-image" title="Click to zoom">
+              <img src="Asserts/Picture1.png" alt="SAAS-Guard System Architecture Diagram" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- Literature Survey -->
+        <div class="domain-content" id="tab-literature">
+          <div class="domain-panel">
+            <h3>Literature Survey</h3>
+            <p>The literature highlights critical challenges in SaaS access control, including the limitations of static
+              RBAC/ABAC models in dynamic cloud environments. Key findings include:</p>
+            <ul class="research-list">
+              <li>Traditional access control models fail to adapt to evolving user behavior and contextual changes in
+                multi-tenant SaaS platforms.</li>
+              <li>Existing insider threat detection systems rely heavily on labeled datasets, limiting their
+                effectiveness against novel attack vectors.</li>
+              <li>Role mining approaches often produce over-privileged assignments due to insufficient behavioral
+                analysis.</li>
+              <li>Current ML-based access decision systems lack transparency, making audit compliance difficult.</li>
+              <li>Explainable AI (XAI) research has not been adequately applied to access control decision pipelines.
+              </li>
+              <li>Few systems integrate anomaly detection, role recommendation, access classification, and
+                explainability into a unified framework.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Research Gap -->
+        <div class="domain-content" id="tab-gap">
+          <div class="domain-panel">
+            <h3>Research Gap</h3>
+            <p>The core research challenge lies in integrating unsupervised anomaly detection, behavioral role
+              recommendation, ML-based access decisioning, and explainable AI into a unified, modular architecture.</p>
+            <p style="margin-top:16px;">Unlike conventional access control, existing frameworks fail to combine these
+              capabilities into a single, adaptive, and interpretable system. There is a significant absence of systems
+              that simultaneously address dynamic insider threats, least-privilege enforcement, real-time access
+              classification, and audit-ready explainability within one pipeline.</p>
+          </div>
+        </div>
+
+        <!-- Research Problem -->
+        <div class="domain-content" id="tab-problem">
+          <div class="domain-panel">
+            <h3>Research Problem</h3>
+            <p
+              style="font-size:1.1rem;line-height:1.9;color:var(--text-primary);font-style:italic;border-left:3px solid var(--accent-primary);padding-left:20px;">
+              How can a cybersecurity system provide mathematically sound, model-specific, and empirically validated
+              explanations for each component of a multi-stage AI pipeline — while synthesizing diverse explanations
+              into concise, actionable natural language summaries that prevent generative AI hallucination?</p>
+          </div>
+        </div>
+
+        <!-- Objectives -->
+        <div class="domain-content" id="tab-objectives">
+          <div class="domain-panel">
+            <h3>Research Objectives</h3>
+            <ol class="objectives-list">
+              <li>Develop an unsupervised anomaly detection system that identifies insider threats and zero-day attacks
+                in real time without labeled training data.</li>
+              <li>Design a behavioral clustering-based role recommendation engine that enforces least-privilege access
+                based on actual user activity patterns.</li>
+              <li>Build an ML-based access classifier that dynamically predicts allow/deny decisions with
+                risk-calibrated confidence scores.</li>
+              <li>Create an explainability engine using Post-Hoc XAI Techniques and a constrained local LLM that
+                generates forensic-quality, hallucination-free decision summaries.</li>
+              <li>Integrate all four components into a unified, modular framework that advances Zero Trust security and
+                GDPR compliance for SaaS platforms.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Methodology -->
+        <div class="domain-content" id="tab-methodology">
+          <div class="domain-panel">
+            <h3>Methodology</h3>
+            <p>This study employs a mixed-methods design science research approach:</p>
+            <ul class="research-list">
+              <li><strong>Anomaly Detection:</strong> Unsupervised learning using Isolation Forest and Autoencoder
+                neural networks trained on user behavioral logs for real-time insider threat detection.</li>
+              <li><strong>Role Recommendation:</strong> Behavioral clustering using DBSCAN and K-Means algorithms with
+                peer-group similarity analysis for dynamic least-privilege role suggestions.</li>
+              <li><strong>Access Classification:</strong> Ensemble ML models (XGBoost, Random Forest, Gradient Boosting)
+                trained on contextual access request features for dynamic allow/deny prediction.</li>
+              <li><strong>Explainability:</strong> Post-hoc interpretability analysis using Post-Hoc XAI Techniques,
+                combined with a constrained local LLM (fine-tuned with guardrails) for generating natural language
+                decision summaries.</li>
+              <li><strong>Validation:</strong> Performance evaluation through accuracy, precision, recall, F1-score
+                metrics, along with security testing and user studies for explainability quality.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Technologies -->
+        <div class="domain-content" id="tab-technologies">
+          <div class="domain-panel">
+            <h3>Technologies Used</h3>
+            <p style="margin-bottom:20px;">Our technology stack combines cutting-edge ML frameworks, cloud
+              infrastructure, and explainability tools.</p>
+            <div class="tech-grid">
+              <span class="tech-badge">Python <span class="tech-category">Language</span></span>
+              <span class="tech-badge">TensorFlow <span class="tech-category">ML Framework</span></span>
+              <span class="tech-badge">PyTorch <span class="tech-category">ML Framework</span></span>
+              <span class="tech-badge">Scikit-learn <span class="tech-category">ML Library</span></span>
+              <span class="tech-badge">XGBoost <span class="tech-category">ML Model</span></span>
+              <span class="tech-badge">Post-Hoc XAI <span class="tech-category">Explainability</span></span>
+              <span class="tech-badge">Flask / FastAPI <span class="tech-category">Backend</span></span>
+              <span class="tech-badge">React <span class="tech-category">Frontend</span></span>
+              <span class="tech-badge">Docker <span class="tech-category">DevOps</span></span>
+              <span class="tech-badge">PostgreSQL <span class="tech-category">Database</span></span>
+              <span class="tech-badge">Redis <span class="tech-category">Cache</span></span>
+              <span class="tech-badge">Kafka <span class="tech-category">Streaming</span></span>
+              <span class="tech-badge">AWS / Azure <span class="tech-category">Cloud</span></span>
+              <span class="tech-badge">Hugging Face <span class="tech-category">LLM</span></span>
+              <span class="tech-badge">Jupyter <span class="tech-category">Research</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MILESTONES
+       ============================================================ -->
+  <section id="milestones">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i data-lucide="milestone" style="width:14px;height:14px"></i> Project
+          Timeline</span>
+        <h2 class="section-title">Research <span class="gradient-text">Milestones</span></h2>
+        <p class="section-subtitle">Our journey from proposal to final presentation.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-progress"></div>
+
+        <!-- Milestone 1 -->
+        <div class="timeline-item completed">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">Mar 2025</span>
+          <div class="glass-card timeline-card">
+            <h3>Brainstorming Workshop</h3>
+            <p>Initial brainstorming and ideation workshop to define the research direction.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="timeline-item completed">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">May 2025</span>
+          <div class="glass-card timeline-card">
+            <h3>Group Registration</h3>
+            <p>Official group registration and team formation for the research project.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="timeline-item completed">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">Jun 2025</span>
+          <div class="glass-card timeline-card">
+            <h3>Topic Assessment Form (TAF)</h3>
+            <p>Submitted Topic Assessment Form with detailed research plan.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="timeline-item completed">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">Jul 2025</span>
+          <div class="glass-card timeline-card">
+            <h3>Project Charter</h3>
+            <p>Documented project scope, objectives, deliverables, and key stakeholders.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 5 -->
+        <div class="timeline-item completed">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">Aug 2025</span>
+          <div class="glass-card timeline-card">
+            <h3>Proposal Reports (Draft)</h3>
+            <p>Submitted draft proposal reports with initial literature review and methodology.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 6 -->
+        <div class="timeline-item completed">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">Sep 2025</span>
+          <div class="glass-card timeline-card">
+            <h3>Proposal Presentation</h3>
+            <p>Presented research proposal with system architecture and methodology.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 7 -->
+        <div class="timeline-item completed">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">Sep 2025</span>
+          <div class="glass-card timeline-card">
+            <h3>Proposal Reports (Final)</h3>
+            <p>Submitted finalized proposal reports incorporating feedback from presentation.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 8 -->
+        <div class="timeline-item completed">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">Jan 2026</span>
+          <div class="glass-card timeline-card">
+            <h3>Progress Presentation &#8211; I</h3>
+            <p>Demonstrated 50% project completion with initial ML model implementations.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 9 -->
+        <div class="timeline-item completed">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">Jan 2026</span>
+          <div class="glass-card timeline-card">
+            <h3>Check List I</h3>
+            <p>First milestone verification and requirements checklist submission.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 10 -->
+        <div class="timeline-item completed">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">Mar 2026</span>
+          <div class="glass-card timeline-card">
+            <h3>Progress Presentation &#8211; II</h3>
+            <p>Presented 90% completion with integrated pipeline demonstration.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 11 -->
+        <div class="timeline-item completed">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">Apr 2026</span>
+          <div class="glass-card timeline-card">
+            <h3>Final Report Submission</h3>
+            <p>Complete documentation of research methodology, results, and analysis.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 12 -->
+        <div class="timeline-item completed">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">Apr 2026</span>
+          <div class="glass-card timeline-card">
+            <h3>Project Website</h3>
+            <p>Launched the official SAAS-Guard research portfolio website.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 13 -->
+        <div class="timeline-item upcoming">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">May 2026</span>
+          <div class="glass-card timeline-card">
+            <h3>Final Presentation &amp; VIVA</h3>
+            <p>Final defense and demonstration of the complete SAAS-Guard system.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 14 -->
+        <div class="timeline-item upcoming">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">May 2026</span>
+          <div class="glass-card timeline-card">
+            <h3>Final Check List</h3>
+            <p>Final milestone verification and requirements checklist submission.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 15 -->
+        <div class="timeline-item upcoming">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">May 2026</span>
+          <div class="glass-card timeline-card">
+            <h3>Logbook Submission</h3>
+            <p>Submission of individual and group research logbooks.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 16 -->
+        <div class="timeline-item upcoming">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">May 2026</span>
+          <div class="glass-card timeline-card">
+            <h3>Research Paper Submission</h3>
+            <p>Submission of the final research paper to conference/journal.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 17 -->
+        <div class="timeline-item upcoming">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">May 2026</span>
+          <div class="glass-card timeline-card">
+            <h3>Paper Evidence</h3>
+            <p>Submission of paper acceptance and publication evidence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DOCUMENTS
+       ============================================================ -->
+  <section id="documents">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i data-lucide="file-text" style="width:14px;height:14px"></i> Research
+          Outputs</span>
+        <h2 class="section-title">Research <span class="gradient-text">Documents</span></h2>
+        <p class="section-subtitle">Access our research documents, reports, and publications.</p>
+      </div>
+
+      <div class="docs-grid">
+        <!-- Doc 1 -->
+        <div class="glass-card doc-card">
+          <div class="doc-icon"><i data-lucide="file-text"></i></div>
+          <h3>Project Charter</h3>
+          <p>Defines the project scope, objectives, deliverables, and key stakeholders.</p>
+          <a href="https://drive.google.com/drive/folders/1HzfW_ClseENax1c7b9ArHDnVxptsjo1K?usp=sharing" target="_blank"
+            rel="noopener" class="btn btn-outline btn-sm">
+            <i data-lucide="download" class="btn-icon"></i> Download
+          </a>
+        </div>
+
+        <!-- Doc 2 -->
+        <div class="glass-card doc-card">
+          <div class="doc-icon"><i data-lucide="file-text"></i></div>
+          <h3>Topic Assessment Form</h3>
+          <p>TAF documenting the research topic assessment by all 4 team members.</p>
+          <a href="https://drive.google.com/drive/folders/1Ds-cWcYnbQU5pAS1HlF-pC_eY8myV5H5?usp=sharing" target="_blank"
+            rel="noopener" class="btn btn-outline btn-sm">
+            <i data-lucide="download" class="btn-icon"></i> Download
+          </a>
+        </div>
+
+        <!-- Doc 3 -->
+        <div class="glass-card doc-card">
+          <div class="doc-icon"><i data-lucide="file-text"></i></div>
+          <h3>Proposal Report</h3>
+          <p>Comprehensive individual research proposal reports with literature review.</p>
+          <a href="https://drive.google.com/drive/folders/1DX39B-1_UNRR94ek8ykNqAaYTXya4BeK?usp=sharing" target="_blank"
+            rel="noopener" class="btn btn-outline btn-sm">
+            <i data-lucide="download" class="btn-icon"></i> Download
+          </a>
+        </div>
+
+        <!-- Doc 4 -->
+        <div class="glass-card doc-card">
+          <div class="doc-icon"><i data-lucide="file-text"></i></div>
+          <h3>Checklists</h3>
+          <p>Project milestones and requirements verification documents.</p>
+          <a href="https://drive.google.com/drive/folders/1-ZSmjI285jP0amrvpB2pnZgRjv4Sdyla?usp=sharing" target="_blank"
+            rel="noopener" class="btn btn-outline btn-sm">
+            <i data-lucide="download" class="btn-icon"></i> Download
+          </a>
+        </div>
+
+        <!-- Doc 5 -->
+        <div class="glass-card doc-card">
+          <div class="doc-icon"><i data-lucide="file-text"></i></div>
+          <h3>Research Paper</h3>
+          <p>Academic paper with methodology, experiments, and findings.</p>
+          <a href="https://drive.google.com/drive/folders/1haE7LX4F47TaFtqXV0cNGInAxISrdEAv?usp=sharing" target="_blank"
+            rel="noopener" class="btn btn-outline btn-sm">
+            <i data-lucide="download" class="btn-icon"></i> Download
+          </a>
+        </div>
+
+        <!-- Doc 6 -->
+        <div class="glass-card doc-card">
+          <div class="doc-icon"><i data-lucide="file-text"></i></div>
+          <h3>Final Thesis</h3>
+          <p>Complete documentation of research methodology, results, and analysis.</p>
+          <a href="https://drive.google.com/drive/folders/1G9QsLPAZ8-gxYFeTboHEz2uWxFE2kkD1?usp=sharing" target="_blank"
+            rel="noopener" class="btn btn-outline btn-sm">
+            <i data-lucide="download" class="btn-icon"></i> Download
+          </a>
+        </div>
+
+        <!-- Doc 7 -->
+        <div class="glass-card doc-card">
+          <div class="doc-icon"><i data-lucide="file-text"></i></div>
+          <h3>Component Reports</h3>
+          <p>Individual technical reports on each research component and contribution.</p>
+          <a href="https://drive.google.com/drive/folders/1PJFvQDBs9T1Mx0VHJRkunqvBDh9owBu_?usp=sharing" target="_blank"
+            rel="noopener" class="btn btn-outline btn-sm">
+            <i data-lucide="download" class="btn-icon"></i> Download
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRESENTATIONS
+       ============================================================ -->
+  <section id="presentations">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i data-lucide="presentation" style="width:14px;height:14px"></i> Research
+          Talks</span>
+        <h2 class="section-title">Research <span class="gradient-text">Presentations</span></h2>
+        <p class="section-subtitle">Slide decks from our research presentations and progress reviews.</p>
+      </div>
+
+      <div class="pres-grid">
+        <!-- Pres 1 -->
+        <div class="glass-card pres-card">
+          <div class="pres-thumbnail">
+            <img src="Asserts/Proposal.png" alt="Proposal Presentation" class="pres-img">
+            <span class="pres-date-badge">June 2025</span>
+          </div>
+          <div class="pres-content">
+            <h3>Proposal Presentation</h3>
+            <p>Initial research proposal and project outline covering scope, objectives, and system architecture.</p>
+            <div class="pres-buttons">
+              <a href="https://docs.google.com/presentation/d/1oWdLJHSoZfrWwe9Sh03Z9nirac6L8KBs/edit?usp=sharing&ouid=110262286513473603501&rtpof=true&sd=true"
+                target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                <i data-lucide="eye" class="btn-icon"></i> View
+              </a>
+              <a href="https://docs.google.com/presentation/d/1oWdLJHSoZfrWwe9Sh03Z9nirac6L8KBs/edit?usp=sharing&ouid=110262286513473603501&rtpof=true&sd=true"
+                target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                <i data-lucide="download" class="btn-icon"></i> Download
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pres 2 -->
+        <div class="glass-card pres-card">
+          <div class="pres-thumbnail">
+            <img src="Asserts/PP1.png" alt="Progress Presentation 1" class="pres-img">
+            <span class="pres-date-badge">Sep 2025</span>
+          </div>
+          <div class="pres-content">
+            <h3>Progress Presentation 1</h3>
+            <p>50% project completion — initial ML model implementations and preliminary experimental results.</p>
+            <div class="pres-buttons">
+              <a href="https://docs.google.com/presentation/d/13c27zeYS29BFRnSxp8Ff2HTsMfnfjaRU/edit?usp=sharing&ouid=110262286513473603501&rtpof=true&sd=true"
+                target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                <i data-lucide="eye" class="btn-icon"></i> View
+              </a>
+              <a href="https://docs.google.com/presentation/d/13c27zeYS29BFRnSxp8Ff2HTsMfnfjaRU/edit?usp=sharing&ouid=110262286513473603501&rtpof=true&sd=true"
+                target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                <i data-lucide="download" class="btn-icon"></i> Download
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pres 3 -->
+        <div class="glass-card pres-card">
+          <div class="pres-thumbnail">
+            <img src="Asserts/PP2.png" alt="Progress Presentation 2" class="pres-img">
+            <span class="pres-date-badge">Feb 2026</span>
+          </div>
+          <div class="pres-content">
+            <h3>Progress Presentation 2</h3>
+            <p>90% project completion — integrated pipeline demonstration and updated experimental results.</p>
+            <div class="pres-buttons">
+              <a href="https://docs.google.com/presentation/d/13BHroLp4W2XIqLrwsrCS0R3XJdS--1C_/edit?usp=sharing&ouid=110262286513473603501&rtpof=true&sd=true"
+                target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                <i data-lucide="eye" class="btn-icon"></i> View
+              </a>
+              <a href="https://docs.google.com/presentation/d/13BHroLp4W2XIqLrwsrCS0R3XJdS--1C_/edit?usp=sharing&ouid=110262286513473603501&rtpof=true&sd=true"
+                target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                <i data-lucide="download" class="btn-icon"></i> Download
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pres 4 -->
+        <div class="glass-card pres-card">
+          <div class="pres-thumbnail">
+            <div class="pres-gradient-bg">FINAL</div>
+            <span class="pres-date-badge">May 2026</span>
+          </div>
+          <div class="pres-content">
+            <h3>Final Presentation</h3>
+            <p>Final defense — complete SAAS-Guard system demonstration with comprehensive results analysis.</p>
+            <div class="pres-buttons">
+              <a href="https://drive.google.com/drive/folders/1EHdU5vl1yKMYfG7-JguK1FPUBCXyBCl9?usp=sharing"
+                target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                <i data-lucide="eye" class="btn-icon"></i> View
+              </a>
+              <a href="https://drive.google.com/drive/folders/1EHdU5vl1yKMYfG7-JguK1FPUBCXyBCl9?usp=sharing"
+                target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                <i data-lucide="download" class="btn-icon"></i> Download
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT US
+       ============================================================ -->
+  <section id="about-us">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i data-lucide="user-check" style="width:14px;height:14px"></i> Team Profiles</span>
+        <h2 class="section-title">About <span class="gradient-text">Us</span></h2>
+        <p class="section-subtitle">Meet the researchers behind SAAS-Guard.</p>
+      </div>
+
+      <div class="about-us-members">
+        <!-- Member 1: Karunarathne -->
+        <div class="glass-card member-profile">
+          <div class="member-photo-col">
+            <img src="Asserts/KARUNARATHNE.png" alt="Dinusha Karunarathne" class="member-photo-large" loading="lazy">
+            <span class="member-role-badge">ML Engineer</span>
+          </div>
+          <div class="member-details">
+            <h3>Karunarathne W.M.G.K.G.D.W.</h3>
+            <div class="member-sid">IT22352262</div>
+            <div class="member-degree">BSc (Hons) in IT — Specialization in Cyber Security</div>
+            <div class="member-contact-row">
+              <a href="mailto:it22352262@my.sliit.lk"><i data-lucide="mail" style="width:14px;height:14px"></i>
+                Email</a>
+              <a href="https://www.linkedin.com/in/dinusha-in/" target="_blank" rel="noopener"><i data-lucide="linkedin"
+                  style="width:14px;height:14px"></i> LinkedIn</a>
+            </div>
+            <hr class="member-divider">
+            <ul class="member-highlights">
+              <li>Component: Anomaly Detection — Insider Threat Detection using Unsupervised ML</li>
+              <li>Developed unsupervised anomaly detection pipeline</li>
+              <li>Implemented Isolation Forest & Autoencoder models</li>
+              <li>Real-time behavioral pattern analysis</li>
+              <li>Zero-day threat detection without labeled data</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Member 2: Sandakalum -->
+        <div class="glass-card member-profile">
+          <div class="member-photo-col">
+            <img src="Asserts/SANDAKALUM.png" alt="Saranga Sandakalum" class="member-photo-large" loading="lazy">
+            <span class="member-role-badge">Data Scientist</span>
+          </div>
+          <div class="member-details">
+            <h3>Sandakalum A.R.G.S.S.</h3>
+            <div class="member-sid">IT22620248</div>
+            <div class="member-degree">BSc (Hons) in IT — Specialization in Cyber Security</div>
+            <div class="member-contact-row">
+              <a href="mailto:it22620248@my.sliit.lk"><i data-lucide="mail" style="width:14px;height:14px"></i>
+                Email</a>
+              <a href="https://www.linkedin.com/in/saranga-sandakalum-670933317/" target="_blank" rel="noopener"><i
+                  data-lucide="linkedin" style="width:14px;height:14px"></i> LinkedIn</a>
+            </div>
+            <hr class="member-divider">
+            <ul class="member-highlights">
+              <li>Component: Role Recommendation — Behavioral Clustering for Least-Privilege Roles</li>
+              <li>Behavioral clustering and role mining engine</li>
+              <li>Peer-group similarity analysis algorithms</li>
+              <li>Least-privilege role suggestion system</li>
+              <li>User access pattern profiling</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Member 3: Rathnayake -->
+        <div class="glass-card member-profile">
+          <div class="member-photo-col">
+            <img src="Asserts/RATHNAYAKE.png" alt="Achira Rathnayake" class="member-photo-large" loading="lazy">
+            <span class="member-role-badge">ML Engineer</span>
+          </div>
+          <div class="member-details">
+            <h3>Rathnayake R.M.A.S.</h3>
+            <div class="member-sid">IT22609762</div>
+            <div class="member-degree">BSc (Hons) in IT — Specialization in Cyber Security</div>
+            <div class="member-contact-row">
+              <a href="mailto:it22609762@my.sliit.lk"><i data-lucide="mail" style="width:14px;height:14px"></i>
+                Email</a>
+              <a href="https://www.linkedin.com/in/achira-shashintha-7807841a5/" target="_blank" rel="noopener"><i
+                  data-lucide="linkedin" style="width:14px;height:14px"></i> LinkedIn</a>
+            </div>
+            <hr class="member-divider">
+            <ul class="member-highlights">
+              <li>Component: Access Classifier — ML-Based Dynamic Access Decisions</li>
+              <li>Dynamic access decision prediction models</li>
+              <li>Risk-calibrated confidence scoring</li>
+              <li>Real-time allow/deny classification</li>
+              <li>Context-aware policy enforcement</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Member 4: Bandara -->
+        <div class="glass-card member-profile">
+          <div class="member-photo-col">
+            <img src="Asserts/BANDARA.png" alt="Anuradha Bandara" class="member-photo-large" loading="lazy">
+            <span class="member-role-badge">AI/XAI Specialist</span>
+          </div>
+          <div class="member-details">
+            <h3>Bandara T.M.A.L.</h3>
+            <div class="member-sid">IT22597274</div>
+            <div class="member-degree">BSc (Hons) in IT — Specialization in Cyber Security</div>
+            <div class="member-contact-row">
+              <a href="mailto:it22597274@my.sliit.lk"><i data-lucide="mail" style="width:14px;height:14px"></i>
+                Email</a>
+              <a href="https://www.linkedin.com/in/anuradha-in/" target="_blank" rel="noopener"><i
+                  data-lucide="linkedin" style="width:14px;height:14px"></i> LinkedIn</a>
+            </div>
+            <hr class="member-divider">
+            <ul class="member-highlights">
+              <li>Component: Explainability Engine — Post-Hoc XAI Techniques & LLM-based Explanations</li>
+              <li>Post-Hoc XAI Techniques integration for model interpretability</li>
+              <li>Constrained local LLM for natural language summaries</li>
+              <li>Hallucination-free forensic-quality explanations</li>
+              <li>Audit-ready justification generation pipeline</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supervisors -->
+      <div class="supervisors-section">
+        <h3 class="section-title" style="margin-bottom:36px;">Our <span class="gradient-text">Supervisors</span></h3>
+        <div class="supervisors-grid">
+          <div class="glass-card supervisor-card">
+            <img src="Asserts/Amila.jpg" alt="Mr. Amila Senarathne" class="supervisor-photo" loading="lazy">
+            <span class="supervisor-badge primary">Supervisor</span>
+            <h4>Mr. Amila Senarathne</h4>
+            <div class="supervisor-title">Head | Industry Engagement Unit / Senior Lecturer</div>
+            <div class="supervisor-dept">Faculty of Computing | Computer Systems Engineering</div>
+            <a href="mailto:amila.n@sliit.lk" class="supervisor-email">
+              <i data-lucide="mail"
+                style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i>amila.n@sliit.lk
+            </a>
+          </div>
+
+          <div class="glass-card supervisor-card">
+            <img src="Asserts/Indunil.jpg" alt="Mr. Indunil Daluwatte" class="supervisor-photo" loading="lazy">
+            <span class="supervisor-badge secondary">Co-Supervisor</span>
+            <h4>Mr. Indunil Daluwatte</h4>
+            <div class="supervisor-title">Lecturer</div>
+            <div class="supervisor-dept">Faculty of Computing | Computer Systems Engineering</div>
+            <a href="mailto:indunil.d@sliit.lk" class="supervisor-email">
+              <i data-lucide="mail"
+                style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i>indunil.d@sliit.lk
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT US
+       ============================================================ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i data-lucide="send" style="width:14px;height:14px"></i> Get in Touch</span>
+        <h2 class="section-title">Contact <span class="gradient-text">Us</span></h2>
+        <p class="section-subtitle">Have questions about our research or interested in collaboration? Reach out!</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Info -->
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <div class="contact-icon-box">
+              <i data-lucide="mail"></i>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:cybersecfyrpsliit@gmail.com">cybersecfyrpsliit@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon-box">
+              <i data-lucide="map-pin"></i>
+            </div>
+            <div>
+              <h4>Address</h4>
+              <p>Faculty of Computing, SLIIT<br>Malabe Campus, New Kandy Rd,<br>Malabe 10115, Sri Lanka</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="glass-card contact-form-card">
+          <form id="contact-form" action="https://formspree.io/f/xpwdkjdl" method="POST">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" class="form-input" placeholder="What's this about?">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Your message..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">
+              <i data-lucide="send" class="btn-icon"></i>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo"><img src="Asserts/logo.png" alt="SAAS-Guard" class="footer-logo-img"> SAAS-Guard</div>
+      <p class="footer-text">AI-Powered Granular Access Control for SaaS Applications</p>
+      <p class="footer-text">© 2025–2026 SAAS-Guard (Project ID: 25-26J-053) | Sri Lanka Institute of Information
+        Technology</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#domain">Domain</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i data-lucide="chevron-up" style="width:20px;height:20px"></i>
+  </button>
+
+  <!-- Toast notifier -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Image Modal -->
+  <div class="image-modal" id="image-modal">
+    <button class="modal-close" aria-label="Close modal">&times;</button>
+    <img id="modal-image" src="" alt="Zoomed image">
+  </div>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+
+</html>
